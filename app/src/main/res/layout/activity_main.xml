@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/action"
+        layout="@layout/actionbar"/>
+
+    <HorizontalScrollView
+        android:scrollbars="none"
+        android:id="@+id/horiList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/action"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+        <LinearLayout
+            android:id="@+id/layoutOvalList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:padding="20dp"
+            android:background="@android:color/transparent">
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+    <AutoCompleteTextView
+        android:id="@+id/input"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="20dp"
+        android:hint="ingredients"
+        app:layout_constraintTop_toBottomOf="@+id/horiList"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp"
+        android:completionThreshold="1"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        />
+
+    <ToggleButton
+        android:id="@+id/containAllToggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOff="Match any"
+        android:textOn="Match all"
+        android:padding="10dp"
+        android:layout_marginRight="170dp"
+        android:background="@drawable/togglebuttondesign"
+        app:layout_constraintTop_toBottomOf="@id/input"
+        app:layout_constraintStart_toStartOf="@id/input"
+        app:layout_constraintEnd_toEndOf="@id/input"
+
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/clearBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:padding="10dp"
+        android:background="@drawable/clearbuttondesign"
+        app:layout_constraintTop_toBottomOf="@id/input"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toEndOf="@id/containAllToggle"
+        />
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/findBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="search"
+        android:textSize="26dp"
+        android:padding="15dp"
+        android:background="@drawable/findbuttondesign"
+        app:layout_constraintTop_toBottomOf="@id/containAllToggle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="12dp"
+
+        />
+    <ListView
+        android:id="@+id/list"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:dividerHeight="20dp"
+        android:divider="@null"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/findBtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="20dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
