@@ -1,6 +1,5 @@
 # BlazeCook App
 
-
 BlazeCook is a mobile app designed to make cooking easier and more convenient. It allows users to enter ingredients they have on hand, and it will provide them with a list of recipes they can make using those ingredients. Even if you only have partial items, BlazeCook will find recipes that match part of the ingredients.
 
 This project is built using Java and the Android Studio framework, and it uses a JSON database to store and retrieve recipe data.
@@ -12,6 +11,20 @@ This project is built using Java and the Android Studio framework, and it uses a
 - **Partial Ingredient Matching:** BlazeCook is smart enough to find recipes even if you only have partial items or incomplete ingredients.
 
 - **Recipe Database:** The app uses a JSON database to store and manage recipe data, making it easy to add, edit, and retrieve recipes.
+
+## Screenshots
+
+### Home Page
+
+![Home Page](screenshots/home-page.png)
+
+### Your Recipe Page
+
+![Your Recipe](screenshots/recipe-page.png)
+
+### Search Page
+
+![Search Page](screenshots/search-page.png)
 
 ## Getting Started
 
